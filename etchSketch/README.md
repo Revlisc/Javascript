@@ -1,0 +1,1 @@
+A small project put together to show skills in DOM traversal.
