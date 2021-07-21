@@ -1,5 +1,5 @@
 let container = document.querySelector('.container');
-let defaultGrid = 4;
+let defaultGrid = 16;
 
 /*
 const square = document.querySelectorAll('.box');
@@ -9,9 +9,8 @@ square.addEventListener("hover", () => {
 */
 
 function makeGrid(size = defaultGrid) {
-    let area = size ** 2;
 
-    for (let i = 1; i <= area; i++) {
+    for (let i = 1; i <= size; i++) {
         let row = document.createElement('div');
         row.classList.add('row');
         container.appendChild(row);
@@ -43,4 +42,4 @@ square.forEach((box) => {
 
 
 
-makeGrid();
+makeGrid(25);
