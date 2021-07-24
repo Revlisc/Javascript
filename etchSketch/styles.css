@@ -23,8 +23,6 @@ button {
     display: inline-block;
 }
 
-
-
 .container {
     display: grid;
     width: 960px;
@@ -34,9 +32,6 @@ button {
     justify-content: stretch;
     margin: auto;
     border: 1px solid black;
-    
-    
-    
 }
 
 .row {
