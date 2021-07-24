@@ -1,18 +1,40 @@
-.box {
-    width: 20px;
-    height: 20px;
-    border: 0.1px solid rgb(235, 11, 11);
-    
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.btnrow {
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    padding: 2px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+
+.boxes {
     display: inline-block;
 }
 
+
+
 .container {
     display: grid;
-    width: 50%;
+    width: 960px;
+    height: 800px;
     font-size: 0;
-
-    margin: 0 auto;
+    grid-gap: 0;
+    justify-content: stretch;
+    margin: auto;
     border: 1px solid black;
+    
     
     
 }
@@ -23,7 +45,8 @@
     padding: 0px;
     border-spacing: 0;
     font-size: 1rem;
-    height: 20px;
+    height:auto;
+    width:max-content;
 }
 
 .changed {
