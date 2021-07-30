@@ -13,23 +13,33 @@ class App extends Component {
         super(props);
         this.state = {
             currentRecipe: getRecipe(),
+            isClicked: false
 
         }
         this.getNewRecipe = this.getNewRecipe.bind(this);
     }
-    
+
     getNewRecipe = () => {
-      this.setState = {
+      this.setState({
         currentRecipe: getRecipe(),
-      }
+        isClicked: true
+      });
     }
 
     render() {
       const { currentRecipe } = this.state;
+      const isClicked = this.state.isClicked;
+      let displayed;
+      if (isClicked) {
+        displayed = currentRecipe && <Recipe recipeChoice={currentRecipe}/>;
+      } else {
+        displayed = <div></div>;
+      }
       return (
         <div className="container">
+          <h1 className="title">Recipe Idea Generator</h1>
           <div className="display-box">
-            <Recipe recipeChoice={currentRecipe}/>
+            {displayed}
           </div>
           <div className="btn">
             <MakeButton handleClick={this.getNewRecipe}/>
